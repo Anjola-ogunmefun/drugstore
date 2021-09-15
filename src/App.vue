@@ -72,7 +72,7 @@
 
               <!-- Top row -->
               <div class="row">
-                <h2 class="txt-color py-2 mt-5">Patients</h2>
+                <h2 class="txt-color py-2 mt-5 ml">Patients</h2>
                 <div class="float">
                   <span class="badge rounded-pill bg-c note"
                     ><svg
@@ -117,7 +117,7 @@
               <div class="col-4">
                 <div class="btn-group">
                   <button
-                    class="btn outline dropdown-toggle py-1 px-3 mt-5"
+                    class="btn outline dropdown-toggle py-1 px-3 mt-5 ml"
                     type="button"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
@@ -135,7 +135,7 @@
             <!-- Patient count -->
             <div class="row">
               <div class="col-5 d-block align-items-center">
-                <div class="box txt-color">
+                <div class="box txt-color ml">
                   <strong><p class="py-3 mt-4 central num">2348</p></strong>
                   <h6 class="central neg-m total">
                     Total no
@@ -151,9 +151,7 @@
             <div class="row">
               <div class="table-responsive-sm mt-5 mb-5 px-3 tb-bg ml rounded">
                 <table class="table mb-5">
-                  <thead>
-                    <h4 class="px-2 py-4 txt-color">All Patients / Users</h4>
-                  </thead>
+                    <h4 class="px-3 py-4 txt-color">All Patients/Users</h4>
                   <tbody>
                     <tr class="bg-t neg-p">
                       <th scope="col" class="pad-5">User Name</th>
@@ -233,15 +231,14 @@ export default {
 </script>
 
 <style scoped>
-@import url("https://fonts.googleapis.com/css2?family=PT+Sans&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300&display=swap');
 
 main {
   margin: 0;
   padding: 0;
-  background: #edf4fd;
+  /* background: #edf4fd; */
   overflow-x: hidden;
-  font-family: "PT Sans", sans-serif;
-}
+font-family: 'Lexend Deca', sans-serif;}
 
 .active {
   margin-left: 1px;
@@ -262,11 +259,14 @@ img {
 .txt-color {
   color: #023e8a;
 }
+.total{
+  font-weight: bold;
+}
 .bg-c {
-  background: #c8ddf9;
+  background: #d2dae9;
 }
 .bg-t {
-  background: #edf4fd;
+  background: #fafbfd;
   border-radius: 30% !important;
   overflow: hidden;
 }
@@ -357,7 +357,7 @@ main {
 .box {
   width: 9rem;
   height: 7rem;
-  background: #c8ddf9;
+  background: #d2dae9 !important;
   border-radius: 10%;
   justify-content: center;
 }
@@ -384,8 +384,8 @@ main {
   height: 100%;
   margin-left: -250px;
   overflow-y: auto;
-  background: #fff;
-  box-shadow: 2px 0 18px 0 #c5d3e6;
+  background: white;
+  box-shadow: 2px 0 20px 0 #c7d9f3;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
@@ -402,7 +402,7 @@ main {
   height: 100;
   position: absolute;
   padding: 15px;
-  background: #edf4fd;
+  background: #f6f8fb;
 }
 
 #wrapper.toggled #page-content-wrapper {
@@ -527,12 +527,15 @@ main {
     font-size: 24px;
   }
 
+  .ml{
+    margin-left: 100px;
+  }
   .neg-m {
     margin-top: -20px;
   }
 
   .pad-5 {
-    padding: 0 20px;
+    padding: 0 30px;
   }
 
   tr {
@@ -542,6 +545,13 @@ main {
   td,
   th {
     font-size: 20px;
+  }
+
+  .tb-bg{
+    width: 90%;
+  }
+  h4{
+    font-size: 26px;
   }
   .central {
     margin-left: 30px;
@@ -556,7 +566,7 @@ main {
   }
 
   #sidebar-wrapper {
-    width: 250px;
+    width: 300px;
   }
 
   #wrapper.toggled #sidebar-wrapper {
